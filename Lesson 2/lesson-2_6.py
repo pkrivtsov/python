@@ -4,7 +4,7 @@ s2 = []
 s3 = []
 s4 = []
 n = int(input('элементов в структуре: '))
-for i in range(n):
+for _ in range(n):
     s1.append(input('Введите наименование товара: '))
     s2.append(input('Введите цену соотвтетсвующего товара: '))
     s3.append(input('Введите количество: '))
@@ -14,6 +14,6 @@ d['цена'] = s2
 d['кол-во'] = s3
 d['ед'] = s4
 result = []
-for i in range(1, len(s1)):
-    result.append((i, {k: v[i] for k, v in d.items()}))
+for i in range(1, n + 1):
+    result.append((i, {k: v[i - 1] for k, v in d.items()}))
 print(result)
