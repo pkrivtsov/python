@@ -1,9 +1,12 @@
 my_list = [7, 5, 3, 3, 2]
-my_list.reverse()
-a = int(input('Введите элеметн рейтинга: '))
+l = len(my_list)
+a = int(input('Введите элемент рейтинга: '))
 if a in my_list:
-    my_list.insert(my_list.index(a), a)
+    my_list.insert(my_list.index(a) + my_list.count(a), a)
 else:
-    my_list.append(a)
-my_list.reverse()
+    for idx, sym in enumerate(my_list):
+        if a > sym:
+            my_list.insert(idx, a)
+            break
+if len(my_list) == l: my_list.append(a)
 print(my_list)
