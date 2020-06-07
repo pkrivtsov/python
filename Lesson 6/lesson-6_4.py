@@ -33,8 +33,11 @@ class WorkCar(Car):
 
 
 class PoliceCar(Car):
-    def __init__(self, speed, color, name, is_police=True):
+    def __init__(self, speed, color, name, is_police=True):  # переопределение базового Car
         super().__init__(speed, color, name, is_police)
+
+
+
 
 
 tc = TownCar(80, 'green', 'TownCar')
@@ -42,8 +45,6 @@ tc.go()
 print(tc.color, tc.show_speed())
 tc.turn('r')
 tc.stop()
-
-
 
 sc = SportCar(100, 'red', 'SportCar')
 sc.go()
