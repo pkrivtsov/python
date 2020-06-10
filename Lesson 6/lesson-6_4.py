@@ -33,7 +33,7 @@ class WorkCar(Car):
 
 
 class PoliceCar(Car):
-    def __init__(self, speed, color, name, is_police=True):  # переопределение базового Car
+    def __init__(self, speed, color, name, is_police=True):  # переопределение базового Car для работы с унаследованными атрибутами
         super().__init__(speed, color, name, is_police)
 
 
